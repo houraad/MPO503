@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[dvips]{graphicx,color}
+\usepackage{indentfirst}
+\usepackage{fancybox}
+\usepackage{pslatex}
+\usepackage{amsmath}
+\usepackage{/Users/lcl/latex/chicago}
+\usepackage[left=2.5cm,top=2.3cm,right=2.5cm,nohead,footskip=2cm]{geometry}
+
+\newenvironment{figurehere}
+  {\def\@captype{figure}}
+  {}
+\makeatother
+
+\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{align}
+\zeta=&\text{curl}(\vec{V})=\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}
+\end{align}
+
+\begin{equation}
+  \frac{\partial u}{\partial t} + u \frac{\partial u}{ \partial x} + v
+  \frac{\partial u}{\partial y} + w \frac{\partial u}{\partial z} - fv
+  = -\frac{1}{\rho} \frac{\partial p}{\partial x}
+\end{equation}
+
+\begin{equation}
+  \frac{\partial v}{\partial t} + u \frac{\partial v}{ \partial x} + v
+  \frac{\partial v}{\partial y} + w \frac{\partial v}{\partial z} + fu
+  = -\frac{1}{\rho} \frac{\partial p}{\partial y}
+\end{equation}
+
+\begin{align*}
+    \frac{d}{dt}\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)&+\left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}\right)\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)+\underbrace{\left(\frac{\partial w}{\partial x}\frac{\partial v}{\partial z}-\frac{\partial w}{\partial y}\frac{\partial u}{\partial z}\right)}_\text{"tilting" term, small}+f\left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}\right)+v\frac{df}{dy}=0
+\end{align*}
+
+\begin{flalign*}
+    \frac{D}{Dt}\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right) & + \left(\frac{\partial u}{\partial x}+ \frac{\partial v}{\partial y}\right) \left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right) + & \\ & + \underbrace{\left(\frac{\partial w}{\partial x}\frac{\partial v}{\partial z}-\frac{\partial w}{\partial y}\frac{\partial u}{\partial z}\right)}_\text{"tilting" term, small}+f\left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}\right)+v\frac{df}{dy}=0
+\end{flalign*}
+
+\begin{align*}
+   \frac{D}{Dt}(\zeta+f)+\underbrace{(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y})(\zeta+f)}_\text{stretching}=0\\
+    \frac{D}{Dt}(\zeta+f)-\frac{\partial w}{\partial z}(\zeta+f)=0
+\end{align*}
+
+\begin{align*}
+\zeta=&\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}
+\end{align*}
+
+\begin{equation*}
+   \int_0^H \left( \frac{\partial v}{\partial x}-\frac{\partial u}{\partial y} \right) dz = - \int_0^H \frac{\partial w}{\partial z} dz
+\end{equation*}
+
+\begin{align*}
+       \frac{D}{Dt}(\zeta+f)-\frac{1}{H}(\zeta+f)\frac{\partial H}{\partial t}=0
+\end{align*}
+
+\begin{align*}
+       \frac{D}{Dt} \left( \frac{\zeta+f}{H} \right) = 0
+\end{align*}
+
+\end{document}

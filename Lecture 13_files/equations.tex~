@@ -1,0 +1,23 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[dvips]{graphicx,color}
+\usepackage{indentfirst}
+\usepackage{fancybox}
+\usepackage{pslatex}
+\usepackage{amsmath}
+\usepackage{/Users/lcl/latex/chicago}
+\usepackage[left=2.5cm,top=2.3cm,right=2.5cm,nohead,footskip=2cm]{geometry}
+
+\newenvironment{figurehere}
+  {\def\@captype{figure}}
+  {}
+\makeatother
+
+\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\addcontentsline{toc}{section}{References}
+\bibliography{/Users/lcl/latex/references}
+\bibliographystyle{/Users/lcl/latex/chicago}
+
+\end{document}
