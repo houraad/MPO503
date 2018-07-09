@@ -1,0 +1,101 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[dvips]{graphicx,color}
+\usepackage{indentfirst}
+\usepackage{fancybox}
+\usepackage{pslatex}
+\usepackage{amsmath}
+\usepackage{/Users/lcl/latex/chicago}
+\usepackage[left=2.5cm,top=2.3cm,right=2.5cm,nohead,footskip=2cm]{geometry}
+
+\newenvironment{figurehere}
+  {\def\@captype{figure}}
+  {}
+\makeatother
+
+\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{flalign}
+  - fv & = - \frac{1}{\rho} \frac{\partial p}{\partial x} \\
+  fu & = - \frac{1}{\rho} \frac{\partial p}{\partial y}
+\end{flalign}
+
+\begin{equation*}
+  \frac{\partial}{\partial x} (fu) + \frac{\partial}{\partial} (fv) = - \frac{\partial^2 p}{\partial x \partial y} +   \frac{\partial^2 p}{\partial x \partial y}  
+\end{equation*}
+
+\begin{equation*}
+  f \frac{\partial u}{\partial x} + u \frac{\partial f}{\partial x} + f \frac{\partial v}{\partial y} + v \frac{\partial f}{\partial y} = 0
+\end{equation*}
+
+\begin{equation*}
+  f \left( \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} \right) + \beta v = 0
+\end{equation*}
+
+\begin{equation*}
+  \beta = \frac{\partial f}{\partial y} = \frac{\partial (2 \Omega \sin \theta)}{\partial y} = \frac{2 \Omega \cos \theta}{R} = 2.3 \times 10^{-11} (\text{m.s})^{-1} \times \cos (\text{latitude}) 
+\end{equation*}
+
+\begin{equation*}
+  f \frac{\partial w}{\partial z} = \beta v
+\end{equation*}
+
+\begin{equation*}
+  \int_{z_\text{bottom}}^{z_\text{top}} \beta v dz = \int_{z_\text{bottom}}^{z_\text{top}} f \frac{\partial w}{\partial z} dz
+\end{equation*}
+
+\begin{flalign*}
+  & \beta V = f w_\text{top}, &
+\end{flalign*}
+
+\noindent where $V = \int v dz$, depth-integrated meridional velocity
+
+\begin{flalign}
+\setcounter{equation}{2}
+  - fv & = \frac{1}{\rho} \frac{\partial \tau_x}{\partial z} \\
+  fu & = \frac{1}{\rho} \frac{\partial \tau_y}{\partial z}
+\end{flalign}
+
+\begin{equation*}
+  \frac{\partial}{\partial x} (fu) + \frac{\partial}{\partial} (fv) = \frac{1}{\rho} \left( \frac{\partial^2 \tau_y}{\partial x \partial z} - \frac{\partial^2 \tau_x}{\partial y \partial z}  \right) 
+\end{equation*}
+
+\begin{equation*}
+  f \left( \frac{\partial u}{\partial x} + \frac{\partial v}{\partial
+    y} \right) + \beta v = \frac{1}{\rho} \\left( \frac{\partial
+    \tau_y}{\partial x} - \frac{\partial \tau_x}{\partial y} \right)
+\end{equation*}
+
+\begin{equation*}
+  - f \frac{\partial w}{\partial z} + \beta v = \frac{1}{\rho} \frac{\partial}{\partial z} \nabla \times 
+\tau
+\end{equation*}
+
+\begin{equation*}
+  \int_{z_\text{Ek}}^{z_0} f \frac{\partial w}{\partial z} dz + \int_{z_\text{Ek}}^{z_0} \beta v dz = \frac{1}{\rho} \int_{z_\text{Ek}}^{z_0} \frac{\partial}{\partial z} \left( \nabla \times \tau \right) dz
+\end{equation*}
+
+\begin{equation*}
+  - f (0 - w_{Ek}) + \beta V_{Ek} = \frac{1}{\rho} \left( \nabla \times \tau \right) dz
+\end{equation*}
+
+\begin{equation*}
+  f w_{Ek} - \frac{\beta \tau_x}{\rho f} = \frac{1}{\rho} \left( \nabla \times \tau \right), \text{\: where \;} V_{Ek} = - \frac{\tau_x}{\rho f}
+\end{equation*}
+
+\begin{equation*}
+  f w_{Ek} - \frac{\beta \tau_x}{\rho f} = \frac{1}{\rho} \left( \nabla \times \tau \right)
+\end{equation*}
+
+\begin{equation*}
+  f w_{Ek} = \frac{1}{\rho} \left( \nabla \times \tau \right)
+\end{equation*}
+
+\begin{flalign*}
+  \text{\footnotesize Geostrophic interior: \;\;\;} & \beta V = f w_\text{top} \\
+  \text{\footnotesize Ekman layer: \;\;\;} & f w_\text{Ek} = \frac{1}{\rho} \left( \nabla \times \tau \right)
+\end{flalign*}
+
+
+\end{document}
